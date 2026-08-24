@@ -158,11 +158,15 @@
     box-shadow:0 1px 0 rgba(18,33,31,0.08);
   }
   .logo{
-    font-family:'Fraunces',serif;
-    font-size:1.15rem;
-    letter-spacing:0.14em;
-    color:var(--deep);
+    display:block;
+    width:92px;
+    line-height:0;
   }
+  .logo img{
+    width:100%;height:auto;
+    transition:filter .5s ease;
+  }
+  header.solid .logo img{filter:brightness(0) saturate(100%) invert(18%) sepia(22%) saturate(1127%) hue-rotate(139deg) brightness(93%) contrast(96%);}
   .header-right{display:flex;align-items:center;gap:14px;}
   .lang-switch{
     display:flex;align-items:center;gap:2px;
@@ -181,6 +185,7 @@
   .lang-btn.active{background:var(--deep);color:var(--white);opacity:1;}
   .lang-btn.active:hover{opacity:1;}
   @media (max-width:560px){
+    .logo{width:82px;}
     .header-right{gap:8px;}
     .lang-btn{padding:4px 8px;font-size:0.64rem;}
   }
@@ -839,7 +844,7 @@ footer .wrap{position:relative;z-index:1;}
 <body>
 
 <header id="siteHeader">
-  <a class="logo" href="#top">MOANA</a>
+  <a class="logo" href="#top" aria-label="Moana Beach Bar"><img src="media/header-logo.png" alt="Moana" width="2104" height="747"></a>
   <div class="header-right">
     <div class="lang-switch" role="group" aria-label="Γλώσσα / Language">
       <button class="lang-btn active" type="button" data-lang="el" aria-pressed="true">ΕΛ</button>
