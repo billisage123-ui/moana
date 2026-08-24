@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://moanaseaside.com/</loc>
     <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image><image:loc>https://moanaseaside.com/media/hero-poster.webp</image:loc></image:image>
+    <image:image><image:loc>https://moanaseaside.com/media/arrival-beach-1160.webp</image:loc></image:image>
+    <image:image><image:loc>https://moanaseaside.com/media/band-beach-1920.webp</image:loc></image:image>
+    <image:image><image:loc>https://moanaseaside.com/media/terrace-food-wide-1160.webp</image:loc></image:image>
+    <image:image><image:loc>https://moanaseaside.com/media/terrace-food-tall-1160.webp</image:loc></image:image>
+    <image:image><image:loc>https://moanaseaside.com/media/moana-life-beach-790.webp</image:loc></image:image>
+    <image:image><image:loc>https://moanaseaside.com/media/moana-life-restaurant-790.webp</image:loc></image:image>
+    <image:image><image:loc>https://moanaseaside.com/media/gallery-01-food-spread-1400.webp</image:loc></image:image>
+    <image:image><image:loc>https://moanaseaside.com/media/gallery-02-food-closeup-933.webp</image:loc></image:image>
+    <image:image><image:loc>https://moanaseaside.com/media/gallery-03-beach-walkway-1400.webp</image:loc></image:image>
+    <image:image><image:loc>https://moanaseaside.com/media/gallery-04-pergola-1400.webp</image:loc></image:image>
+    <image:image><image:loc>https://moanaseaside.com/media/gallery-05-sunset-pergola-1400.webp</image:loc></image:image>
+    <image:image><image:loc>https://moanaseaside.com/media/gallery-06-palm-detail-1400.webp</image:loc></image:image>
+    <image:image><image:loc>https://moanaseaside.com/media/gallery-07-beach-umbrellas-1400.webp</image:loc></image:image>
   </url>
 </urlset>
+
