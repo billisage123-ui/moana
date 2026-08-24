@@ -46,7 +46,7 @@
     "latitude": 40.9499862,
     "longitude": 25.1644188
   },
-  "hasMap": "https://maps.google.com/?cid=18404041092832858725",
+  "hasMap": "https://maps.app.goo.gl/MXDPq6RS7E7eJLnf6",
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
     "dayOfWeek": [
@@ -540,6 +540,11 @@
     width:100%;height:100%;
     display:block;border:0;
   }
+  .exp-map iframe{pointer-events:none;}
+  .exp-map-link{
+    position:absolute;inset:0;z-index:3;
+    display:block;text-decoration:none;
+  }
 
   .exp-title-box{
     position:absolute;left:50%;bottom:20%;
@@ -924,8 +929,8 @@ footer .wrap{position:relative;z-index:1;}
       </div>
       <div class="exp-block exp-block-wide reveal-right stagger2">
         <div class="exp-card exp-map">
-          <iframe src="https://maps.google.com/maps?q=Moana+Beach+Bar&ll=40.9499862,25.1644188&z=17&output=embed" width="100%" height="100%" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Moana Beach Bar location on Google Maps"></iframe>
-          <a class="exp-title-box" href="https://maps.google.com/?cid=18404041092832858725" target="_blank" rel="noopener noreferrer"><h4>Maps</h4></a>
+          <iframe src="https://www.google.com/maps?q=40.9499862,25.1644188&z=17&output=embed" width="100%" height="100%" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Moana Beach Bar location on Google Maps"></iframe>
+          <a class="exp-map-link" href="https://maps.app.goo.gl/MXDPq6RS7E7eJLnf6" target="_blank" rel="noopener noreferrer" aria-label="Open Moana Beach Bar in Google Maps"><span class="exp-title-box"><h4>Maps</h4></span></a>
         </div>
       </div>
     </div>
