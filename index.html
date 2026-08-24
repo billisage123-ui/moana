@@ -17,13 +17,15 @@
 <meta property="og:description" content="Beach bar στην Παραλία Αρωγής, κοντά στο Φανάρι και την Κομοτηνή, με cocktails, φαγητό και μοναδικό ηλιοβασίλεμα.">
 <meta property="og:url" content="https://moanaseaside.com/">
 <meta property="og:image" content="https://moanaseaside.com/media/hero-poster.webp">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="804">
+<meta property="og:image:alt" content="Moana Beach Bar on Arogi Beach near Fanari at golden hour">
 <meta property="og:locale" content="el_GR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Moana Beach Bar Αρωγή, Φανάρι | Cocktails &amp; Sunset">
 <meta name="twitter:description" content="Beach bar στην Παραλία Αρωγής, κοντά στο Φανάρι και την Κομοτηνή, με cocktails, φαγητό και μοναδικό ηλιοβασίλεμα.">
 <meta name="twitter:image" content="https://moanaseaside.com/media/hero-poster.webp">
+<meta name="twitter:image:alt" content="Moana Beach Bar on Arogi Beach near Fanari at golden hour">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -31,7 +33,9 @@
   "@id": "https://moanaseaside.com/#business",
   "name": "Moana Beach Bar",
   "description": "Beach bar στην Παραλία Αρωγής, κοντά στο Φανάρι και την Κομοτηνή, με cocktails, φαγητό και θέα στο ηλιοβασίλεμα.",
-  "image": "https://moanaseaside.com/media/hero-poster.webp",
+  "image": {
+    "@id": "https://moanaseaside.com/#primaryimage"
+  },
   "url": "https://moanaseaside.com/",
   "telephone": "+30 693 661 0101",
   "address": {
@@ -76,6 +80,35 @@
   "url": "https://moanaseaside.com/",
   "name": "Moana Beach Bar",
   "alternateName": "Moana Seaside",
+  "publisher": {
+    "@id": "https://moanaseaside.com/#business"
+  },
+  "inLanguage": ["el", "en"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://moanaseaside.com/#webpage",
+  "url": "https://moanaseaside.com/",
+  "name": "Moana Beach Bar Αρωγή, Φανάρι | Cocktails & Sunset",
+  "isPartOf": {
+    "@id": "https://moanaseaside.com/#website"
+  },
+  "about": {
+    "@id": "https://moanaseaside.com/#business"
+  },
+  "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "@id": "https://moanaseaside.com/#primaryimage",
+    "url": "https://moanaseaside.com/media/hero-poster.webp",
+    "contentUrl": "https://moanaseaside.com/media/hero-poster.webp",
+    "width": 1920,
+    "height": 804,
+    "caption": "Moana Beach Bar on Arogi Beach near Fanari at golden hour",
+    "representativeOfPage": true
+  },
   "inLanguage": ["el", "en"]
 }
 </script>
@@ -420,16 +453,11 @@
   /* ---------- FULL BAND ---------- */
   .band{
     position:relative;height:38vh;min-height:260px;
-    background:url("media/band-beach-1280.webp") center center / cover no-repeat;
     display:flex;align-items:center;justify-content:center;text-align:center;
     overflow:hidden;
   }
-  @media (max-width:700px){
-    .band{background-image:url("media/band-beach-640.webp");}
-  }
-  @media (min-width:1400px){
-    .band{background-image:url("media/band-beach-1920.webp");}
-  }
+  .band-picture{position:absolute;inset:0;z-index:0;display:block;width:100%;height:100%;}
+  .band-picture img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;}
   .band::before{
     content:"";position:absolute;inset:0;z-index:1;
     background:rgba(14,59,67,0.55);
@@ -904,6 +932,11 @@ footer .wrap{position:relative;z-index:1;}
 </section>
 
 <section class="band" id="terrace">
+  <picture class="band-picture">
+    <source type="image/avif" srcset="media/band-beach-640.avif 640w, media/band-beach-1280.avif 1280w, media/band-beach-1920.avif 1920w" sizes="100vw">
+    <source type="image/webp" srcset="media/band-beach-640.webp 640w, media/band-beach-1280.webp 1280w, media/band-beach-1920.webp 1920w" sizes="100vw">
+    <img src="media/band-beach-1920.webp" srcset="media/band-beach-640.webp 640w, media/band-beach-1280.webp 1280w, media/band-beach-1920.webp 1920w" sizes="100vw" alt="Beach umbrellas and wooden structures at Moana Beach Bar on Arogi Beach near Fanari" width="1920" height="1280" loading="lazy" decoding="async">
+  </picture>
   <div class="band-content">
     <span class="band-word from-left" id="bandWordTop">HEAR THE</span>
     <span class="band-word from-right" id="bandWordBottom">CALLING</span>
@@ -912,7 +945,7 @@ footer .wrap{position:relative;z-index:1;}
 
 <section class="split reverse" id="terrace-visit">
   <div class="wrap" style="align-items:start;">
-    <div class="visual-duo v2 slide-left"><div class="visual-tile tile-wide"><picture class="responsive-picture"><source type="image/avif" srcset="media/terrace-food-wide-480.avif 480w, media/terrace-food-wide-800.avif 800w, media/terrace-food-wide-1160.avif 1160w" sizes="(max-width:900px) 70vw, 34vw"><source type="image/webp" srcset="media/terrace-food-wide-480.webp 480w, media/terrace-food-wide-800.webp 800w, media/terrace-food-wide-1160.webp 1160w" sizes="(max-width:900px) 70vw, 34vw"><img src="media/terrace-food-wide-1160.webp" srcset="media/terrace-food-wide-480.webp 480w, media/terrace-food-wide-800.webp 800w, media/terrace-food-wide-1160.webp 1160w" sizes="(max-width:900px) 70vw, 34vw" alt="Cold drinks bucket, flatbreads and a hot dog served on the beach" width="1160" height="773" loading="lazy" decoding="async"></picture><span class="cap">Η Ταράτσα</span></div><div class="visual-tile tile-tall"><picture class="responsive-picture"><source type="image/avif" srcset="media/terrace-food-tall-480.avif 480w, media/terrace-food-tall-800.avif 800w, media/terrace-food-tall-1160.avif 1160w" sizes="(max-width:900px) 46vw, 23vw"><source type="image/webp" srcset="media/terrace-food-tall-480.webp 480w, media/terrace-food-tall-800.webp 800w, media/terrace-food-tall-1160.webp 1160w" sizes="(max-width:900px) 46vw, 23vw"><img src="media/terrace-food-tall-1160.webp" srcset="media/terrace-food-tall-480.webp 480w, media/terrace-food-tall-800.webp 800w, media/terrace-food-tall-1160.webp 1160w" sizes="(max-width:900px) 46vw, 23vw" alt="Close-up of a hot dog and flatbread with sea and beach in the background" width="1160" height="1450" loading="lazy" decoding="async"></picture></div></div>
+    <div class="visual-duo v2 slide-left"><div class="visual-tile tile-wide"><picture class="responsive-picture"><source type="image/avif" srcset="media/terrace-food-wide-480.avif 480w, media/terrace-food-wide-800.avif 800w, media/terrace-food-wide-1160.avif 1160w" sizes="(max-width:900px) 70vw, 34vw"><source type="image/webp" srcset="media/terrace-food-wide-480.webp 480w, media/terrace-food-wide-800.webp 800w, media/terrace-food-wide-1160.webp 1160w" sizes="(max-width:900px) 70vw, 34vw"><img src="media/terrace-food-wide-1160.webp" srcset="media/terrace-food-wide-480.webp 480w, media/terrace-food-wide-800.webp 800w, media/terrace-food-wide-1160.webp 1160w" sizes="(max-width:900px) 70vw, 34vw" alt="Flatbreads, a hot dog and cold drinks served at Moana Beach Bar on Arogi Beach" width="1160" height="773" loading="lazy" decoding="async"></picture><span class="cap">Η Ταράτσα</span></div><div class="visual-tile tile-tall"><picture class="responsive-picture"><source type="image/avif" srcset="media/terrace-food-tall-480.avif 480w, media/terrace-food-tall-800.avif 800w, media/terrace-food-tall-1160.avif 1160w" sizes="(max-width:900px) 46vw, 23vw"><source type="image/webp" srcset="media/terrace-food-tall-480.webp 480w, media/terrace-food-tall-800.webp 800w, media/terrace-food-tall-1160.webp 1160w" sizes="(max-width:900px) 46vw, 23vw"><img src="media/terrace-food-tall-1160.webp" srcset="media/terrace-food-tall-480.webp 480w, media/terrace-food-tall-800.webp 800w, media/terrace-food-tall-1160.webp 1160w" sizes="(max-width:900px) 46vw, 23vw" alt="Close-up of a hot dog and flatbread at Moana Beach Bar with the sea in the background" width="1160" height="1450" loading="lazy" decoding="async"></picture></div></div>
     <div class="text slide-right">
       <p class="eyebrow" data-en="The Invitation">Η Πρόσκληση</p>
       <h2 data-en-html="An Invitation<br>Without Words">Μια Πρόσκληση<br>Χωρίς Λόγια</h2>
@@ -926,7 +959,7 @@ footer .wrap{position:relative;z-index:1;}
     <h3 class="explore-title reveal" aria-label="Explore Moana Life">Explore Moana Life</h3>
     <div class="explore-grid">
       <a class="exp-block reveal-right" href="#" id="openGalleryBtn">
-        <div class="exp-card"><picture class="responsive-picture"><source type="image/avif" srcset="media/moana-life-beach-400.avif 400w, media/moana-life-beach-790.avif 790w" sizes="(max-width:900px) calc(100vw - 48px), 478px"><source type="image/webp" srcset="media/moana-life-beach-400.webp 400w, media/moana-life-beach-790.webp 790w" sizes="(max-width:900px) calc(100vw - 48px), 478px"><img src="media/moana-life-beach-790.webp" srcset="media/moana-life-beach-400.webp 400w, media/moana-life-beach-790.webp 790w" sizes="(max-width:900px) calc(100vw - 48px), 478px" alt="View of the beach through palm leaves, with umbrellas, sunbeds and the sea" width="790" height="1053" loading="lazy" decoding="async"></picture>
+        <div class="exp-card"><picture class="responsive-picture"><source type="image/avif" srcset="media/moana-life-beach-400.avif 400w, media/moana-life-beach-790.avif 790w" sizes="(max-width:900px) calc(100vw - 48px), 478px"><source type="image/webp" srcset="media/moana-life-beach-400.webp 400w, media/moana-life-beach-790.webp 790w" sizes="(max-width:900px) calc(100vw - 48px), 478px"><img src="media/moana-life-beach-790.webp" srcset="media/moana-life-beach-400.webp 400w, media/moana-life-beach-790.webp 790w" sizes="(max-width:900px) calc(100vw - 48px), 478px" alt="Moana Beach Bar on Arogi Beach near Fanari, seen through palm leaves with umbrellas and sunbeds beside the sea" width="790" height="1053" loading="lazy" decoding="async"></picture>
           <div class="exp-title-box"><h4>Beach</h4></div>
         </div>
       </a>
@@ -1666,3 +1699,4 @@ footer .wrap{position:relative;z-index:1;}
 
 </body>
 </html>
+
